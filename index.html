@@ -225,71 +225,71 @@
 
     <!-- Recent Projects Section -->
 
-    <section class="projects" id="projects">
-
+    <!-- Recent Projects Section -->
+<section class="projects" id="projects">
     <h2 class="section-title">Our Recent Projects</h2>
 
     <div class="gallery">
 
-        <!-- Photo 1 -->
+        <!-- Image 1 -->
         <div class="card">
-
             <img src="images/work1.jpeg"
-                 alt="Recent Civil Work">
-
+                 alt="Recent Civil Work"
+                 onclick="openImage(this.src)">
             <h3>Civil Construction</h3>
-
             <p>Recent Construction Work</p>
-
         </div>
 
-
-        <!-- Photo 2 -->
+        <!-- Image 2 -->
         <div class="card">
-
             <img src="images/work2.jpeg"
-                 alt="Tile Installation">
-
+                 alt="Tile Installation"
+                 onclick="openImage(this.src)">
             <h3>Tile Installation</h3>
-
             <p>Floor & Wall Tile Work</p>
-
         </div>
-
 
         <!-- Video 1 -->
         <div class="card">
-
             <video controls>
                 <source src="images/work3.mp4" type="video/mp4">
                 Your browser does not support video.
             </video>
-
             <h3>Recent Work Video</h3>
-
             <p>KO Build Infra Project</p>
-
         </div>
-
 
         <!-- Video 2 -->
         <div class="card">
-
             <video controls>
                 <source src="images/work4.mp4" type="video/mp4">
                 Your browser does not support video.
             </video>
-
             <h3>Construction Work</h3>
-
             <p>Recent Project Video</p>
-
         </div>
 
     </div>
-
 </section>
 
+
+<!-- Full Screen Image Popup -->
+<div id="imagePopup" class="image-popup" onclick="closeImage()">
+    <span class="close-popup">&times;</span>
+    <img id="popupImage" src="" alt="Full Image">
+</div>
+
+
+<script>
+function openImage(imageSrc) {
+    document.getElementById("popupImage").src = imageSrc;
+    document.getElementById("imagePopup").style.display = "flex";
+}
+
+function closeImage() {
+    document.getElementById("imagePopup").style.display = "none";
+}
+</script>
 
     <!-- Reviews Section -->
 

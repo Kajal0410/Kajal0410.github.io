@@ -404,3 +404,52 @@ border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,.1);
 text-align:center;
 }
+/* Project Images and Videos */
+.gallery .card img,
+.gallery .card video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Image Click Cursor */
+.gallery .card img {
+    cursor: pointer;
+}
+
+/* Full Screen Image Popup */
+.image-popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Large Image */
+.image-popup img {
+    max-width: 95%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Close Button */
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
